@@ -16,62 +16,62 @@ class Friend {
     //Fin atributos de Mickey
 
     //Setters
-    setAge(age){
-      this._age = age;
+    setAge(age) {
+        this._age = age;
     }
 
-    setSemester(semester){
-      this._semester = semester;
+    setSemester(semester) {
+        this._semester = semester;
     }
 
-    setHeight(height){
-      this._height = height;
+    setHeight(height) {
+        this._height = height;
     }
 
-    setWeight(weight){
-      this._weight
+    setWeight(weight) {
+        this._weight
     }
 
     //Getters
 
-    getName(){
-      return this.name;
+    getName() {
+        return this.name;
     }
 
-    getLastname(){
-      return this.lastname;
+    getLastname() {
+        return this.lastname;
     }
 
-    getAge(){
-      return this._age;
+    getAge() {
+        return this._age;
     }
 
-    getOccupation(){
-      return this.occupation;
+    getOccupation() {
+        return this.occupation;
     }
 
-    getHobby(){
-      return this.hobby;
+    getHobby() {
+        return this.hobby;
     }
 
-    getQuote(){
-      return this.quote;
+    getQuote() {
+        return this.quote;
     }
 
-    getSemester(){
-      return this._semester;
+    getSemester() {
+        return this._semester;
     }
 
-    getHeight(){
-      return this._height;
+    getHeight() {
+        return this._height;
     }
 
-    getWeight(){
-      return this._weight;
+    getWeight() {
+        return this._weight;
     }
 
-    getNick(){
-      return this.nick;
+    getNick() {
+        return this.nick;
     }
 
 
@@ -116,24 +116,24 @@ class Friend {
     }
 
     //Metodos de Mickey
-    Altura(){
-      console.log((this._height < 1.58)?`¡${this.nick}, eres muy bajito!`:((this._height < 1.72)?`${this.nick}, eres más o menos promedio`:`${this.nick}, ¿Qué tal el clima allá arriba?`));
+    Altura() {
+        console.log((this._height < 1.58) ? `¡${this.nick}, eres muy bajito!` : ((this._height < 1.72) ? `${this.nick}, eres más o menos promedio` : `${this.nick}, ¿Qué tal el clima allá arriba?`));
     }
 
-    Peso(){
-      console.log((this._weight < 55)?`Mejor ponte piedras en los zapatos ${this.nick} xD`:((this._height < 80)?`Tranquilo ${this.nick} puedes subir al elevador con calma :3`:`Hmm... Yo creo que mejor usas las escaleras ${this.nick}`));
+    Peso() {
+        console.log((this._weight < 55) ? `Mejor ponte piedras en los zapatos ${this.nick} xD` : ((this._height < 80) ? `Tranquilo ${this.nick} puedes subir al elevador con calma :3` : `Hmm... Yo creo que mejor usas las escaleras ${this.nick}`));
     }
-    CMI(){
-      console.log(`Su IMC es de ${this._height-(this._weight/100)}.`);
-      console.log((this._height-(this._weight/100) < .8)?`¡¡¡Alguien dele un sandwich a ${this.nick}!!!`:((this._height-(this._weight/100) < 1.2)?`Otro tamalito, ${this.nick}? :3`:`Dieta y ejercicio para usted, ${this.nick} ¬¬`));
+    CMI() {
+        console.log(`Su IMC es de ${this._height-(this._weight/100)}.`);
+        console.log((this._height - (this._weight / 100) < .8) ? `¡¡¡Alguien dele un sandwich a ${this.nick}!!!` : ((this._height - (this._weight / 100) < 1.2) ? `Otro tamalito, ${this.nick}? :3` : `Dieta y ejercicio para usted, ${this.nick} ¬¬`));
     }
-    nickname(){
-      console.log(`Hmm... Tu apodo es muy ${(this.nick.length<5)?'corto':'largo'}, ${this.nick}...`);
-    }
-    //Fin de Métodos de Mickey
+    nickname() {
+            console.log(`Hmm... Tu apodo es muy ${(this.nick.length<5)?'corto':'largo'}, ${this.nick}...`);
+        }
+        //Fin de Métodos de Mickey
 };
 
-const Cloud = new Friend('Claudio', 'Romero', 23, 'Estudiante', 'Musico Frustrado', '59', 10, 1.71,61,'El Furry');
+const Cloud = new Friend('Claudio', 'Romero', 23, 'Estudiante', 'Musico Frustrado', '59', 10, 1.71, 61, 'El Furry');
 
 Cloud.Henlo();
 Cloud.Quote();
@@ -149,3 +149,12 @@ Cloud.nickname();
 console.log(`¡Buenas! Mi nombre es ${Cloud.getName()}, pero me dicen ${Cloud.getNick()}, y tengo ${Cloud.getAge()} años de edad.`);
 
 Object.freeze(Cloud) // ya se los congele
+
+//Inicio R2
+//UUAA!! MAMASE MAMASA MAMACUSA    MAMASE MAMASA MAMACUSA    MAMASE MAMASA MAMACUSA    
+//Atributos
+Cloud.internal._age = 5;
+Cloud.internal.name = 'No es claudio';
+Cloud.internal.nickname = 'El furro';
+
+console.log(`¡Buenas! Mi nombre es ${Cloud.getName()}, pero me dicen ${Cloud.getNick()}, y tengo ${Cloud.getAge()} años de edad.`);
