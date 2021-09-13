@@ -1,3 +1,5 @@
+'use strict';
+
 class Friend {
     name = '';
     lastname = '';
